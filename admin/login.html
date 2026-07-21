@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login - कृषिMitra 🌾</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: background 1s ease-in-out;
+  position: relative;
+}
+
+.login-box {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  animation: fadeIn 2s ease;
+}
+
+.login-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #1d4ed8;
+}
+
+.lang-select {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="lang-select">
+  <label for="langSelect">Language: </label>
+  <select id="langSelect">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+    <option value="mr">मराठी</option>
+  </select>
+</div>
+
+<div class="login-box">
+
+  <h1 id="loginTitle">Admin Login</h1>
+
+   <form action="admin_login.php" method="POST">
+
+    <input type="email"
+           name="email"
+           placeholder="Admin Email"
+           required>
+
+    <input type="password"
+           name="password"
+           placeholder="Password"
+           required>
+
+    <button type="submit"
+            id="loginBtn">
+      Admin Login
+    </button>
+
+  </form>
+
+</div>
+
+<script>
+
+const backgrounds = [
+  '../images/b1.jpg',
+  '../images/b2.jpg',
+  '../images/b3.jpg',
+  '../images/b4.jpg',
+  '../images/b5.jpg'
+];
+
+let bgIndex = 0;
+
+function changeBackground() {
+  document.body.style.backgroundImage =
+    `url('${backgrounds[bgIndex]}')`;
+
+  bgIndex = (bgIndex + 1) % backgrounds.length;
+}
+
+changeBackground();
+setInterval(changeBackground, 5000);
+
+const translations = {
+  en: {
+    loginTitle: "Admin Login",
+    loginBtn: "Admin Login"
+  },
+  hi: {
+    loginTitle: "एडमिन लॉगिन",
+    loginBtn: "एडमिन लॉगिन"
+  },
+  mr: {
+    loginTitle: "प्रशासक लॉगिन",
+    loginBtn: "प्रशासक लॉगिन"
+  }
+};
+
+document.getElementById("langSelect")
+.addEventListener("change", function(){
+
+    const lang = this.value;
+
+    document.getElementById("loginTitle").innerText =
+      translations[lang].loginTitle;
+
+    document.getElementById("loginBtn").innerText =
+      translations[lang].loginBtn;
+});
+
+</script>
+
+</body>
+</html>
