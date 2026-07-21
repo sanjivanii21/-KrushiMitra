@@ -173,10 +173,10 @@ http://localhost/farm
 
 ## 👩‍💻 Developed By
 
- Sanjivani Gedekar
- Saiyad Naved 
- Vaishnavi Solav
- Sarthak Solav
+ - **Sanjivani Gedekar**
+- **Saiyad Naved**
+- **Vaishnavi Solav**
+- **Sarthak Solav**
 B.Tech – Computer Science & Engineering  
 P.R. Pote Patil College of Engineering & Management, Amravati
 
