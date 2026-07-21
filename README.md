@@ -146,20 +146,19 @@ http://localhost/farm
 
 ---
 
-## 📸 Screenshots
+ ## 📸 Screenshots
 
-### Home Page
-(Add Screenshot Here)
+### Homepage
+![Homepage](screenshots/Homepage.png)
 
 ### Farmer Dashboard
-(Add Screenshot Here)
-
-### Weather Module
-(Add Screenshot Here)
+![Farmer Dashboard](screenshots/Farmer_Dashboard.png)
 
 ### Admin Dashboard
-(Add Screenshot Here)
+![Admin Dashboard](screenshots/Admin_Dashboard.png)
 
+### Weather Page
+![Weather](screenshots/Weather.png)
 ---
 
 ## 🎯 Project Objectives
